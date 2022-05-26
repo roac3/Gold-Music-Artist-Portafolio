@@ -1,0 +1,39 @@
+.animado_toright{
+    opacity: 0;
+    transition: all 1s;
+}
+
+.animado_up{
+    opacity: 0;
+    transition: all 1s;
+}
+
+.ToRightAnimation{
+    animation: ToRightAnimation .5s;
+}
+
+.UpAnimation{
+    animation: UpAnimation .5s;
+}
+
+@keyframes ToRightAnimation{
+
+    0%{
+        transform: translateX(-60px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+
+}
+
+@keyframes UpAnimation{
+
+    0%{
+        transform: translateY(60px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+
+}

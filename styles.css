@@ -1,0 +1,639 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: white
+}
+
+:root{
+    --main-color: hsl(267, 83%, 54%);
+    --btn-color: hsla(267, 93%, 46%, 0.342);
+}
+
+body{
+    background-color: black;
+}
+
+header{
+    width: 100%;
+    background-color: var(--main-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 200px;
+    height: 100px;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.logo a span{
+    font-size: 3em;
+    text-align: center;
+}
+
+.logo a{
+    text-align: center;
+    font-size: 2em;
+    text-decoration: none;
+    letter-spacing: 4px;
+}
+
+header ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+header ul li{
+    padding: 10px 30px;
+}
+
+header ul li a{
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+header ul li:hover{
+    background-color: var(--main-color);
+    transition: all 0.5s;
+}
+
+.btn_menu{
+    display: none;
+    font-size: 30px;
+}
+
+
+.main-image{
+    width: 50%;
+    height: calc(100vh - 100px);
+    background-image: url("images/Luis1.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 0px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    float:left;
+
+    transition: all 1s;
+}
+
+.img_text{
+    
+    padding: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+   
+}
+
+.img_text h3{
+    font-size: 140px;
+    letter-spacing: 6px;
+    color: var(--main-color);
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 5px;
+}
+
+.img_text span{
+    font-size: 30px;
+    color: var(--main-color);
+    width: 100%;
+    text-align: end;
+}
+
+.img_text .btn{
+    background-color: var(--btn-color);
+    padding: 20px 30px;
+    margin-top: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    letter-spacing: 2px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.img_text .btn:hover{
+    background-color: var(--main-color);
+    box-shadow: 0 0 10px var(--main-color),
+                0 0 40px var(--main-color);
+    transition-delay: .5s;
+}
+
+.btn span{
+    position: absolute;
+    display: block;
+    background: linear-gradient(90deg,transparent,var(--main-color));
+    transition: .125s ease-in-out;
+}
+
+.btn .span1{
+    top:0;
+    left:-100%;
+    width: 100%;
+    height: 2px;
+}
+
+.btn .span2{
+    top:-100%;
+    right: 0;
+    height: 100%;
+    width: 2px;
+    
+}
+
+.btn .span3{
+    bottom: 0;
+    left:100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,var(--main-color));
+}
+
+.btn .span4{
+    bottom:-100%;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(270deg,transparent,var(--main-color));
+}
+
+.btn:hover .span1{
+    left: 0;  
+}
+
+.btn:hover .span2{
+    top:0;
+    transition-delay: .125s;
+}
+
+.btn:hover .span3{
+    left:0;
+    transition-delay: .25s;
+}
+
+.btn:hover .span4{
+    bottom:0;
+    transition-delay: .375s;
+}
+
+
+.news{
+    width: 50%;
+    height: 100vh;
+
+    float:right;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.video{
+    width: 50%;
+    height: calc(100vh - 100px);
+
+    float:right;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* padding: 0 20px; */
+
+    background-image: url("images/tension.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.videotitle{
+    color:rgb(255, 153, 0);
+    font-weight: 800;
+    font-size: 90px;
+    margin-bottom: 80px;
+    line-height: 30px;
+    text-shadow: 0 0 30px black;
+    width: 100%;
+    text-align: center;
+}
+
+.videotitle span{
+    color:rgb(255, 153, 0);
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.news_card{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.news_content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 60%;
+    height: 550px;
+    position: relative;
+    overflow: hidden; 
+}
+
+.news_text h2{
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.news_text p{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.news_text h2, .news_text p{
+    text-align: center;
+    width: 100%;
+    color: black;
+}
+
+
+.news_text{
+    padding: 20px 50px;
+    background-color: white;
+    width: fit-content;
+    margin-bottom: 30px;
+}
+
+.img_news{
+    width: 100%;
+   height: 400px;
+}
+
+.img_news img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.slider-icon{
+    width: 10%;
+    font-size: 45px;
+    cursor: pointer;
+}
+
+.slider_btns{
+    width: 100%;
+    height: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.sliderbtn{
+    min-width: 50px;
+    height: 4px;
+    background-color: gray;
+    margin: 0 5px;
+}
+
+.sliderbtn:hover,
+.activesbtn{
+    background-color: rgb(185, 184, 184);
+}
+
+.news_slider{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    transition: all 1s ;
+    padding: 10px;
+    margin-left: -200%;
+}
+
+.music_container{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+}
+
+.music_container h1{
+    width: 100%;
+}
+
+.music{
+    width: 50%;
+    height: 100vh;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.music_container ul li{
+    list-style: none;
+    border-top: solid gray 4px;
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    width: 100%;
+}
+
+.music_icon{
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.icon_container{
+    display: flex;
+    align-items: center;
+}
+
+.music_container ul{
+    width: 100%;
+}
+
+.music_icon img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.music_title{
+    margin-bottom: 40px;
+}
+
+.socials{
+    width: 100%;
+    height: 200px;
+    /* background-color: antiquewhite; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials_content{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.socials_content a img{
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+}
+
+.socials_content .social_icon{
+    position: relative;
+    margin: 30px;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.socials_content a{
+    text-decoration: none;
+}
+
+.social_icon a p{
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.social_icon::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background-color: var(--main-color);
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.social_icon:hover:before{
+    opacity: 1;
+}
+
+footer{
+    background-color: var(--main-color);
+    width: 100%;
+    text-align: center;
+    line-height: 20px;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+footer p a{
+    transition: all 0.5s;
+}
+
+footer p a:hover{
+    color: black;
+}
+
+
+@media screen and (max-width: 1010px){
+   
+    header{
+        justify-content: center;
+        padding: 20px 0;
+    }
+
+    header .logo{
+        width: 100%;
+    }
+
+    header ul{
+        flex-basis: 100%;
+    }
+
+    .img_text{
+        padding: 0;
+        margin-right: 10px;
+    }
+
+    .img_text h3{
+        font-size: 80px;
+    }
+
+    .img_text span{
+        font-size: 20px;
+    }
+
+    .videotitle{
+        font-size: 50px;
+    }
+    
+    .videotitle span{
+        font-size: 20px;
+    }
+
+    .wrapper{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .news{
+        width: 100%;
+        order: 0;
+        height: fit-content;
+        margin-bottom: 30px;
+    }
+
+    .music{
+        width: 100%;
+        height: fit-content;
+        margin: 20px 0;
+    }
+
+    .sliderbtn{
+        min-width: 30px;
+    }
+}
+
+@media screen and (max-width:500px){
+
+    header .btn_menu{
+        display: block;
+    }
+
+    header{
+        z-index: 2;
+    }
+
+    header ul{
+        position: absolute;
+        top: -100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: calc(100vh - 100px);
+        background-color: black;
+        z-index: 1;
+        transition: all 0.6s;
+    }
+
+    header ul li{
+        width: 80%;
+        margin: 30px 0;
+        padding: 0;
+        border-bottom: solid var(--main-color) 2px;
+        padding-bottom: 10px;
+    }
+
+    .activemenu{
+        top: 100px;
+    }
+
+    header ul li a{
+        padding: 0;
+    }
+
+    header ul li:hover{
+      background-color: black;
+    }
+
+    .main-image{
+        width: 100%;
+    }
+
+    .img_text{
+        justify-content: center;
+    }
+
+    .img_text span{
+        text-align: center;
+    }
+
+    .video{
+        width: 100%;
+        height: 100vh;
+    }
+
+    .news{
+        padding: 10px;
+    }
+    
+    .news_content{
+        width: 80%;
+    }
+
+    .news_text h2{
+        font-size: 30px;
+    }
+
+    .news_text p{
+        font-size: 15px;
+    }
+
+    .socials_content .social_icon{
+        margin: 0;
+        padding: 10px;
+    }
+
+    .social_icon a img{
+        width: 50px;
+        height: 50px;
+    }
+
+    .social_icon a p{
+        font-size: 10px;
+    }
+
+    footer{
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
